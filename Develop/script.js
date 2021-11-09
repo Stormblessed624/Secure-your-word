@@ -32,9 +32,37 @@ function generatePassword() {
     window.alert("Please select minimum of one character type.");
     generatePassword();
   }
+  var finalChoice = [];
+  if(choices.confirmUppercase) {
+    for(let i = 0; i < upperChars.length; i++) {
+      finalChoice.push(upperChars[i]);
+    }
+  }
+  if(choices.confirmLowercase) {
+    for(let i = 0; i < lowerChars.length; i++) {
+      finalChoice.push(lowerChars[i]);
+    }
+  }
+  if(choices.confirmSpecial) {
+    for(let i = 0; i < specialChars.length; i++) {
+      finalChoice.push(specialChars[i]);
+    }
+  }
+  if(choices.confirmNumbers) {
+    for(let i = 0; i < numbers.length; i++) {
+      finalChoice.push(numbers[i]);
+    }
+  }
 
-  // Switch statements to provide password
-
+  // Then run array through for loop using wordLength as limiter for loop and Math.random
+  var password = [];
+  for(let i = 0; i < wordLength; i++) {
+    charPick = finalChoice[Math.floor(Math.random() * finalChoice.length)];
+    password.push(charPick)
+  }
+  // return password without commas
+  return password.join('');
+  
 }
 
 // Get references to the #generate element
