@@ -12,7 +12,7 @@
   ## Usage
   This is useful for creating a secure password utilizing personal needs.
 
-  ![alt text](Develop/assets/Password-Generator.png)
+  ![alt text](assets/Password-Generator.png)
 
   ## Contributing
   Stormblessed624
